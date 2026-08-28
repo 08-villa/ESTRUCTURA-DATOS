@@ -65,13 +65,16 @@ class Linked_list:
 
     def insert_at(self, data, position):
         if (position == 0):
+            print("position = 0")
             self.insert_first(data)
         elif (position == self.size-1):
+            print(f"position = {self.size-1}")
             self.insert_last(data)
         elif (position > self.size):
-            print("ERROR...." \
-            "The data can´t be inserted")
+            print(f"position mayor que {self.size}")
+            print("ERROR.... The data can´t be inserted")
         else:
+            print("ok")
             previous = self.head
             k=0
             while k < position-1:
@@ -79,6 +82,7 @@ class Linked_list:
                 new_node = Node(data)
                 new_node.next = previous.next
                 previous.next = new_node
+                k += 1 # Antes me saltaba error porque no le habia puesto este contador
             self.size += 1 
 
 
@@ -94,6 +98,6 @@ new_list = Linked_list()
 new_list.insert_first(43)
 new_list.insert_last(10)
 print(f"Tamaño de la lista: {new_list.size}")
-new_list.insert_at(5, 2)
-new_list.insert_at(3, 6)
 new_list.show_list()
+new_list.insert_at(2,2)
+new_list.insert_at(4,7)

@@ -48,7 +48,7 @@ class Linked_list:
 list = Linked_list()
 
 while True:
-    print("SNAPTUBE")
+    print("APP ---> SNAPTUBE")
     print("1. Insertar cancion")
     print("2. Buscar cancion")
     print("3. Mostrar canciones")

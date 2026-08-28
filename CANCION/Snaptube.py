@@ -76,6 +76,9 @@ while True:
     elif option == "3":
         print("Mostrar canciones: ")
         list.show_list()
+    elif option == "4":
+        print("Saliendo del sistema...")
+        break
     else:
-        print("--SALIENDO DEL SISTEMA...--")
+        print("Opcion no valida")
         break
